@@ -161,3 +161,7 @@ foundation.pEp.adapter.macOS
 .??*.swp
 .DS_Store
 debug.log
+
+#############
+
+secretSudoPassword.sh

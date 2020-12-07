@@ -56,6 +56,7 @@
 				155C3FDD257E96970070C9AE /* Sources */,
 				155C3FDE257E96970070C9AE /* Frameworks */,
 				155C3FDF257E96970070C9AE /* Resources */,
+				156776D5257E99A5003B3403 /* Install Bundle For User */,
 			);
 			buildRules = (
 			);
@@ -106,6 +107,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		156776D5257E99A5003B3403 /* Install Bundle For User */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install Bundle For User";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIBRARY_PATH=\"$HOME/Library/Mail/Bundles\"\nexport SUDO_ASKPASS=\"${PROJECT_DIR}/secretSudoPassword.sh\"\n\n# cleanup\nsudo -A rm -fr \"$LIBRARY_PATH/$FULL_PRODUCT_NAME\"\n\n# Install\nsudo -A mkdir -p \"$LIBRARY_PATH\"\nsudo -A cp -RH \"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\" \"$LIBRARY_PATH\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		155C3FDD257E96970070C9AE /* Sources */ = {
