@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//extern NSString *bpToolbarItemIdentifier;
+
 @interface BPMailBundle : NSObject
 
 @end
