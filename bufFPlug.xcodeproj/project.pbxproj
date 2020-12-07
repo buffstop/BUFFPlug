@@ -6,9 +6,16 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 156776DB257E9C58003B3403 /* BPMailBundle.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		155C3FE1257E96970070C9AE /* bufFPlug.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bufFPlug.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		155C3FE4257E96970070C9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		156776D8257E9C1B003B3403 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
+		156776DA257E9C58003B3403 /* BPMailBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMailBundle.h; sourceTree = "<group>"; };
+		156776DB257E9C58003B3403 /* BPMailBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPMailBundle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,9 +48,28 @@
 		155C3FE3257E96970070C9AE /* bufFPlug */ = {
 			isa = PBXGroup;
 			children = (
+				156776D7257E9BED003B3403 /* MailHeaders */,
+				156776D9257E9C24003B3403 /* src */,
 				155C3FE4257E96970070C9AE /* Info.plist */,
 			);
 			path = bufFPlug;
+			sourceTree = "<group>";
+		};
+		156776D7257E9BED003B3403 /* MailHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				156776D8257E9C1B003B3403 /* MVMailBundle.h */,
+			);
+			path = MailHeaders;
+			sourceTree = "<group>";
+		};
+		156776D9257E9C24003B3403 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				156776DA257E9C58003B3403 /* BPMailBundle.h */,
+				156776DB257E9C58003B3403 /* BPMailBundle.m */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
