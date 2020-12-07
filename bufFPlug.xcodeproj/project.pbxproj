@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 156776DB257E9C58003B3403 /* BPMailBundle.m */; };
-		15AA7E5D257EB5B000B526DF /* MailToolbar+BPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AA7E5C257EB5B000B526DF /* MailToolbar+BPAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +30,6 @@
 		15AA7E52257EB05100B526DF /* MessageViewer+BPAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageViewer+BPAdditions.h"; sourceTree = "<group>"; };
 		15AA7E53257EB05200B526DF /* MessageViewer+BPAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MessageViewer+BPAdditions.m"; sourceTree = "<group>"; };
 		15AA7E56257EB0F700B526DF /* NSToolbarDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSToolbarDelegate-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E5B257EB5B000B526DF /* MailToolbar+BPAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailToolbar+BPAdditions.h"; sourceTree = "<group>"; };
-		15AA7E5C257EB5B000B526DF /* MailToolbar+BPAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MailToolbar+BPAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +84,6 @@
 				15AA7E58257EB2B200B526DF /* UnusedDelete */,
 				156776DA257E9C58003B3403 /* BPMailBundle.h */,
 				156776DB257E9C58003B3403 /* BPMailBundle.m */,
-				15AA7E5B257EB5B000B526DF /* MailToolbar+BPAdditions.h */,
-				15AA7E5C257EB5B000B526DF /* MailToolbar+BPAdditions.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -209,7 +204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15AA7E5D257EB5B000B526DF /* MailToolbar+BPAdditions.m in Sources */,
 				156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

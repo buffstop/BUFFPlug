@@ -16,8 +16,6 @@
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wundeclared-selector"
 
-static NSString *bpToolbarItemIdentifier = @"bpToolbarItemIdentifier";
-
 static BPMailBundle *mySelf;
 
 - (id)init {
@@ -51,17 +49,19 @@ static BPMailBundle *mySelf;
 
 // MARK: - Swizzle Mailtoolbar & Delegate (MessageView)
 
+static NSString *bpToolbarItemIdentifier = @"bpToolbarItemIdentifier";
+
 + (void) swizzleAddCustomMailToolbarItem {
     [self swizzleMailtoolbarToolbarDelegateMethods];
     [self swizzleMessageViewerToolbarDelegateMethods];
 }
 
 - (NSToolbarItem *)bp_toolbar:(NSToolbar *)arg1
-        itemForItemIdentifier:(NSString *)arg2
-    willBeInsertedIntoToolbar:(BOOL)arg3 {
-    //    if (![arg2 isEqualToString:bpToolbarItemIdentifier]) {
-    //        return [self bp_toolbar:arg1 itemForItemIdentifier:arg2 willBeInsertedIntoToolbar:arg3]; //BUFF: BUG: fails on >1rst call
-    //    }
+          itemForItemIdentifier:(NSString *)arg2
+      willBeInsertedIntoToolbar:(BOOL)arg3 {
+//    if (![arg2 isEqualToString:bpToolbarItemIdentifier]) {
+//        return [self bp_toolbar:arg1 itemForItemIdentifier:arg2 willBeInsertedIntoToolbar:arg3]; //BUFF: BUG: fails on >1rst call
+//    }
     // Make sure our toolbar item was not already added
     for(NSToolbarItem *item in [arg1 items]) {
         if([item.itemIdentifier isEqualToString:bpToolbarItemIdentifier])
@@ -131,17 +131,11 @@ static BPMailBundle *mySelf;
 }
 
 + (void)swizzleMailtoolbarToolbarDelegateMethods {
-//    static dispatch_once_t onceToken;
-//    [self swizzleMethodOfClassNamed:@"MailToolbar"
-//                   originalSelector:@selector(toolbarDefaultItemIdentifiers:)
-//                   swizzledSelector:@selector(bp_toolbarDefaultItemIdentifiers:)
-//                          onceToken:onceToken];
-    static dispatch_once_t onceToken2;
-    [self swizzleMethodWithClassNameOfClassHoldingTheSwizzled:@"MailToolbar_BPAdditions"
-                                         nameOfClassToSwizzle:@"MailToolbar"
-                                             originalSelector:@selector(plistForToolbarWithIdentifier)
-                                             swizzledSelector:@selector(bp_plistForToolbarWithIdentifier)
-                                                    onceToken:onceToken2];
+    static dispatch_once_t onceToken;
+    [self swizzleMethodOfClassNamed:@"MailToolbar"
+                   originalSelector:@selector(toolbarDefaultItemIdentifiers:)
+                   swizzledSelector:@selector(bp_toolbarDefaultItemIdentifiers:)
+                          onceToken:onceToken];
 }
 
 // ############### INVESTIGATE
@@ -234,35 +228,6 @@ static BPMailBundle *mySelf;
         Class selfClass = [self class];
         Method originalMethod = class_getInstanceMethod(swizzleClass, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(selfClass, swizzledSelector);
-        assert(originalMethod);
-        assert(swizzledMethod);
-
-        BOOL didAddMethod = class_addMethod(swizzleClass,
-                                            originalSelector,
-                                            method_getImplementation(swizzledMethod),
-                                            method_getTypeEncoding(swizzledMethod));
-        if (didAddMethod) {
-            class_replaceMethod(swizzleClass,
-                                swizzledSelector,
-                                method_getImplementation(originalMethod),
-                                method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }
-    });
-}
-
-+ (void)swizzleMethodWithClassNameOfClassHoldingTheSwizzled:(NSString *)origClassName
-                                       nameOfClassToSwizzle:(NSString *)swizzleClassName
-                                           originalSelector:(SEL)originalSelector
-                                           swizzledSelector:(SEL)swizzledSelector
-                                                  onceToken:(dispatch_once_t) onceToken {
-    dispatch_once(&onceToken, ^{
-        Class origClass = NSClassFromString(origClassName);
-        Class swizzleClass = NSClassFromString(swizzleClassName);
-
-        Method originalMethod = class_getInstanceMethod(swizzleClass, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(origClass, swizzledSelector);
         assert(originalMethod);
         assert(swizzledMethod);
 
