@@ -245,4 +245,8 @@ static NSString *bpToolbarItemIdentifier = @"bpToolbarItemIdentifier";
         }
     });
 }
+
+//BUFF: SAME FOR STATIC, then plist. If fail, hack the rest in for our working button. Care about orig items afterwards.
+
+//
 @end

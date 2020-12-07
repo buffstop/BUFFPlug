@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "155C3FE0257E96970070C9AE"
-               BuildableName = "bufFPlug.bundle"
+               BuildableName = "bufFPlug.mailbundle"
                BlueprintName = "bufFPlug"
                ReferencedContainer = "container:bufFPlug.xcodeproj">
             </BuildableReference>
@@ -55,7 +55,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "155C3FE0257E96970070C9AE"
-            BuildableName = "bufFPlug.bundle"
+            BuildableName = "bufFPlug.mailbundle"
             BlueprintName = "bufFPlug"
             ReferencedContainer = "container:bufFPlug.xcodeproj">
          </BuildableReference>
