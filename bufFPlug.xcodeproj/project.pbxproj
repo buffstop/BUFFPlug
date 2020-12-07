@@ -11,7 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		155C3FE1257E96970070C9AE /* bufFPlug.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bufFPlug.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		155C3FE1257E96970070C9AE /* bufFPlug.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bufFPlug.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		155C3FE4257E96970070C9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		156776D8257E9C1B003B3403 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
 		156776DA257E9C58003B3403 /* BPMailBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMailBundle.h; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		155C3FE2257E96970070C9AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				155C3FE1257E96970070C9AE /* bufFPlug.bundle */,
+				155C3FE1257E96970070C9AE /* bufFPlug.mailbundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			);
 			name = bufFPlug;
 			productName = bufFPlug;
-			productReference = 155C3FE1257E96970070C9AE /* bufFPlug.bundle */;
+			productReference = 155C3FE1257E96970070C9AE /* bufFPlug.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -289,7 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = security.pep.bufFPlug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Debug;
 		};
@@ -304,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = security.pep.bufFPlug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Release;
 		};
