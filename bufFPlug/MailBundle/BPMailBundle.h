@@ -5,11 +5,13 @@
 //  Created by Andreas Buff on 07.12.20.
 
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
-#import "MCMessageHeaders.h"
 #import "MCMessage.h"
+#import "MCMessageHeaders.h"
 
-static NSMutableDictionary<MCMessage*,MCMessageHeaders*> * _Nonnull mcHeadersForMcMessge;
+static NSMutableDictionary<MCMessage*,MCMessageHeaders*> * _Nonnull mcHeadersForMcMessge; //BUFF: obsolete?
+static NSToolbarItem * _Nonnull ourToolbarItem;
 
 NS_ASSUME_NONNULL_BEGIN
 

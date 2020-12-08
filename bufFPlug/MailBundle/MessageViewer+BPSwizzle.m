@@ -8,6 +8,7 @@
 
 #import <AppKit/AppKit.h>
 #import "MailToolbar+BPSwizzle.h"
+#import "BPMailBundle.h"
 
 
 @implementation MessageViewer_BP
@@ -30,6 +31,7 @@
 
     item.target = self;
     item.action = @selector(toolbarItemAction:);
+    ourToolbarItem = item;
     return item;
 }
 
@@ -39,6 +41,13 @@
     alert.informativeText = @"Done!";
     [alert addButtonWithTitle:@"Check"];
     [alert runModal];
+}
+
++ (void)updateOurToolbarItemWithHeaders:(MCMessageHeaders*)newHeaders {
+    NSView *testView = [[NSView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, 70.0, 70.0))];
+    ourToolbarItem.view = testView;
+    NSLog(@"BUFF: newHeaders :%@", newHeaders);
+    // got updated
 }
 
 - (NSArray *)bp_toolbarAllowedItemIdentifiers:(NSToolbar *)arg1 {
