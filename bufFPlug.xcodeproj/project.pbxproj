@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		15A49330257FB2700033FB9D /* MailToolbar+BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A4932F257FB2700033FB9D /* MailToolbar+BPSwizzle.m */; };
 		15A498F2257FB33D0033FB9D /* MessageViewer+BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A498F1257FB33D0033FB9D /* MessageViewer+BPSwizzle.m */; };
-		15A498F6257FB4660033FB9D /* BPSwizzleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A498F5257FB4660033FB9D /* BPSwizzleUtil.m */; };
+		15A498F6257FB4660033FB9D /* BPCodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A498F5257FB4660033FB9D /* BPCodeInjector.m */; };
 		4E4E73F3257AA06B0045AD8D /* BPMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E73F1257AA06B0045AD8D /* BPMailBundle.m */; };
 /* End PBXBuildFile section */
 
@@ -19,8 +19,8 @@
 		15A4932F257FB2700033FB9D /* MailToolbar+BPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MailToolbar+BPSwizzle.m"; sourceTree = "<group>"; };
 		15A498F0257FB33D0033FB9D /* MessageViewer+BPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageViewer+BPSwizzle.h"; sourceTree = "<group>"; };
 		15A498F1257FB33D0033FB9D /* MessageViewer+BPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MessageViewer+BPSwizzle.m"; sourceTree = "<group>"; };
-		15A498F4257FB4660033FB9D /* BPSwizzleUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPSwizzleUtil.h; sourceTree = "<group>"; };
-		15A498F5257FB4660033FB9D /* BPSwizzleUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPSwizzleUtil.m; sourceTree = "<group>"; };
+		15A498F4257FB4660033FB9D /* BPCodeInjector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPCodeInjector.h; sourceTree = "<group>"; };
+		15A498F5257FB4660033FB9D /* BPCodeInjector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPCodeInjector.m; sourceTree = "<group>"; };
 		4E4E73E2257A9FC90045AD8D /* bufFPlug.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bufFPlug.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4E73E5257A9FC90045AD8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E4E73F1257AA06B0045AD8D /* BPMailBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPMailBundle.m; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 				15A4932F257FB2700033FB9D /* MailToolbar+BPSwizzle.m */,
 				15A498F0257FB33D0033FB9D /* MessageViewer+BPSwizzle.h */,
 				15A498F1257FB33D0033FB9D /* MessageViewer+BPSwizzle.m */,
-				15A498F4257FB4660033FB9D /* BPSwizzleUtil.h */,
-				15A498F5257FB4660033FB9D /* BPSwizzleUtil.m */,
+				15A498F4257FB4660033FB9D /* BPCodeInjector.h */,
+				15A498F5257FB4660033FB9D /* BPCodeInjector.m */,
 			);
 			path = MailBundle;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			files = (
 				4E4E73F3257AA06B0045AD8D /* BPMailBundle.m in Sources */,
 				15A498F2257FB33D0033FB9D /* MessageViewer+BPSwizzle.m in Sources */,
-				15A498F6257FB4660033FB9D /* BPSwizzleUtil.m in Sources */,
+				15A498F6257FB4660033FB9D /* BPCodeInjector.m in Sources */,
 				15A49330257FB2700033FB9D /* MailToolbar+BPSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

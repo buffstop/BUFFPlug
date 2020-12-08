@@ -1,5 +1,5 @@
 //
-//  BPSwizzleUtil.h
+//  BPCodeInjector
 //  buFPlug
 //
 //  Created by Andreas Buff on 08.12.20.
@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (BPSwizzle)
 
-+ (void)swizzleSelectors:(NSArray<NSString*>*)selectorNames;
++ (void)injectMailBPExtensionsAndswizzleSelectors:(NSArray<NSString*>*)selectorNames;
 
 @end
 

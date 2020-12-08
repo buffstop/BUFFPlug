@@ -1,11 +1,11 @@
 //
-//  BPSwizzleUtil.m
+//  BPCodeInjector.m
 //  buFPlug
 //
 //  Created by Andreas Buff on 08.12.20.
 //
 
-#import "BPSwizzleUtil.h"
+#import "BPCodeInjector.h"
 @import ObjectiveC.runtime;
 #import <objc/objc-class.h>
 
@@ -13,10 +13,10 @@
 
 // MARK: - API
 
-+ (void)swizzleSelectors:(NSArray<NSString*>*)selectorNames {
++ (void)injectMailBPExtensionsAndswizzleSelectors:(NSArray<NSString*>*)selectorNames {
     Class extensionClass = [self extensionClass];
     [self addMethodsFromClass:extensionClass];
-    [self onlySwizzleSelectors:selectorNames];
+    [self swizzleSelectors:selectorNames];
 }
 
 // MARK: - Private
@@ -27,7 +27,7 @@
     return NSClassFromString(extensionClassName);
 }
 
-+(void)onlySwizzleSelectors:(NSArray<NSString*>*)selectorNames {
++(void)swizzleSelectors:(NSArray<NSString*>*)selectorNames {
     Class class = self.class;
     NSString *prefix = @"bp_";
     for(NSString *selectorName in selectorNames) {

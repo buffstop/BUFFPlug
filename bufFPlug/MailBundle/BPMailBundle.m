@@ -6,7 +6,7 @@
 
 #import "BPMailBundle.h"
 
-#import "BPSwizzleUtil.h"
+#import "BPCodeInjector.h"
 
 @import ObjectiveC.runtime;
 @import AppKit;
@@ -60,14 +60,14 @@ static BPMailBundle *mySelf;
     NSArray<NSString*> * selectors = @[@"toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:",
                                        @"toolbarAllowedItemIdentifiers:",
                                        @"toolbarWillAddItem:"];
-    [class swizzleSelectors:selectors];
+    [class injectMailBPExtensionsAndswizzleSelectors:selectors];
 }
 
 + (void)swizzleMailtoolbarToolbarDelegateMethods {
     Class class = NSClassFromString(@"MailToolbar");
     NSArray<NSString*> * selectors = @[@"toolbarDefaultItemIdentifiers:",
                                        @"_plistForToolbarWithIdentifier:"];
-    [class swizzleSelectors:selectors];
+    [class injectMailBPExtensionsAndswizzleSelectors:selectors];
 }
 
 @end

@@ -29,8 +29,10 @@ NSString* const bpToolbarItemIdentifier = @"bpToolbarItemIdentifier";
 
     NSMutableDictionary *configuration = [ret mutableCopy];
     NSMutableArray *defaultSet = [configuration[@"default set"] mutableCopy];
-    [defaultSet addObject:bpToolbarItemIdentifier   ];
-    [configuration setObject:defaultSet forKey:@"default set"];
+    if (![defaultSet containsObject:bpToolbarItemIdentifier]) {
+        [defaultSet addObject:bpToolbarItemIdentifier];
+        [configuration setObject:defaultSet forKey:@"default set"];
+    }
 
     return configuration;
 }
