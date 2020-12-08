@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 156776DB257E9C58003B3403 /* BPMailBundle.m */; };
-		1580939A257FE7BC00AFAA61 /* BPCodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15809399257FE7BC00AFAA61 /* BPCodeInjector.m */; };
-		1580939F257FE93300AFAA61 /* MailToolbar+BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1580939E257FE93300AFAA61 /* MailToolbar+BPSwizzle.m */; };
-		158093A4257FE9AF00AFAA61 /* MessageViewer+BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 158093A3257FE9AF00AFAA61 /* MessageViewer+BPSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,12 +16,6 @@
 		156776D8257E9C1B003B3403 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
 		156776DA257E9C58003B3403 /* BPMailBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMailBundle.h; sourceTree = "<group>"; };
 		156776DB257E9C58003B3403 /* BPMailBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPMailBundle.m; sourceTree = "<group>"; };
-		15809398257FE7BC00AFAA61 /* BPCodeInjector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPCodeInjector.h; sourceTree = "<group>"; };
-		15809399257FE7BC00AFAA61 /* BPCodeInjector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPCodeInjector.m; sourceTree = "<group>"; };
-		1580939D257FE93300AFAA61 /* MailToolbar+BPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailToolbar+BPSwizzle.h"; sourceTree = "<group>"; };
-		1580939E257FE93300AFAA61 /* MailToolbar+BPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MailToolbar+BPSwizzle.m"; sourceTree = "<group>"; };
-		158093A2257FE9AF00AFAA61 /* MessageViewer+BPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageViewer+BPSwizzle.h"; sourceTree = "<group>"; };
-		158093A3257FE9AF00AFAA61 /* MessageViewer+BPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MessageViewer+BPSwizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,32 +66,10 @@
 		156776D9257E9C24003B3403 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1580939C257FE8FD00AFAA61 /* MailInjectorExtensions */,
-				15809390257FE75F00AFAA61 /* BPCodeInjector */,
 				156776DA257E9C58003B3403 /* BPMailBundle.h */,
 				156776DB257E9C58003B3403 /* BPMailBundle.m */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		15809390257FE75F00AFAA61 /* BPCodeInjector */ = {
-			isa = PBXGroup;
-			children = (
-				15809398257FE7BC00AFAA61 /* BPCodeInjector.h */,
-				15809399257FE7BC00AFAA61 /* BPCodeInjector.m */,
-			);
-			path = BPCodeInjector;
-			sourceTree = "<group>";
-		};
-		1580939C257FE8FD00AFAA61 /* MailInjectorExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				1580939D257FE93300AFAA61 /* MailToolbar+BPSwizzle.h */,
-				1580939E257FE93300AFAA61 /* MailToolbar+BPSwizzle.m */,
-				158093A2257FE9AF00AFAA61 /* MessageViewer+BPSwizzle.h */,
-				158093A3257FE9AF00AFAA61 /* MessageViewer+BPSwizzle.m */,
-			);
-			path = MailInjectorExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,9 +160,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				158093A4257FE9AF00AFAA61 /* MessageViewer+BPSwizzle.m in Sources */,
-				1580939F257FE93300AFAA61 /* MailToolbar+BPSwizzle.m in Sources */,
-				1580939A257FE7BC00AFAA61 /* BPCodeInjector.m in Sources */,
 				156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
