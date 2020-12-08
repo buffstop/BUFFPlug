@@ -1,36 +1,35 @@
 //
-//  BPCodeInjector.m
-//  bufFPlug
+//  BPSwizzleUtil.m
+//  buFPlug
 //
 //  Created by Andreas Buff on 08.12.20.
 //
 
-#import "BPCodeInjector.h"
+#import "BPSwizzleUtil.h"
 @import ObjectiveC.runtime;
 #import <objc/objc-class.h>
 
-@implementation NSObject (BPCodeInjector)
+@implementation NSObject (BPSwizzle)
 
-static NSString *prefix = @"bp_";
-static NSString *postfix = @"_BP";
 // MARK: - API
 
-+ (void)injectExtensionCodeAndSwizzleSelectors:(NSArray<NSString*>*)selectorNames {
++ (void)swizzleSelectors:(NSArray<NSString*>*)selectorNames {
     Class extensionClass = [self extensionClass];
     [self addMethodsFromClass:extensionClass];
-    [self swizzleSelectors:selectorNames];
+    [self onlySwizzleSelectors:selectorNames];
 }
 
-// MARK: - "Private"
+// MARK: - Private
 
 + (Class)extensionClass {
     NSString *selfClassName = NSStringFromClass(self.class);
-    NSString *extensionClassName = [NSString stringWithFormat:@"%@%@", selfClassName, postfix];
+    NSString *extensionClassName = [NSString stringWithFormat:@"%@_BP", selfClassName];
     return NSClassFromString(extensionClassName);
 }
 
-+(void)swizzleSelectors:(NSArray<NSString*>*)selectorNames {
++(void)onlySwizzleSelectors:(NSArray<NSString*>*)selectorNames {
     Class class = self.class;
+    NSString *prefix = @"bp_";
     for(NSString *selectorName in selectorNames) {
         NSString *mailSelectorName = selectorName;
         NSString *extensionSelectorName = [NSString stringWithFormat:@"%@%@", prefix, selectorName];
@@ -41,7 +40,7 @@ static NSString *postfix = @"_BP";
         if(![class swizzleMethod:selector withMethod:extensionSelector]) {
             // If that didn't work, try to add as class method.
             if(![class swizzleClassMethod:selector withClassMethod:extensionSelector])
-                assert(false);
+                NSLog(@"Assumed as inject only (intentionally not swizzled)");
         }
     }
 

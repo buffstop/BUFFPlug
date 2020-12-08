@@ -1,10 +1,9 @@
-//
-//  MessageViewer+BPSwizzle.m
-//  bufFPlug
-//
-//  Created by Andreas Buff on 08.12.20.
-//
-
+////
+////  MessageViewer+BPSwizzle.m
+////  buFPlug
+////
+////  Created by Andreas Buff on 08.12.20.
+////
 #import "MessageViewer+BPSwizzle.h"
 
 #import <AppKit/AppKit.h>

@@ -1,6 +1,6 @@
 //
 //  MailToolbar+BPSwizzle.m
-//  bufFPlug
+//  buFPlug
 //
 //  Created by Andreas Buff on 08.12.20.
 //

@@ -1,6 +1,6 @@
 //
-//  MessageViewer+BPSwizzle.h
-//  bufFPlug
+//  BPSwizzleUtil.h
+//  buFPlug
 //
 //  Created by Andreas Buff on 08.12.20.
 //
@@ -9,7 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MessageViewer_BP : NSObject
+@interface NSObject (BPSwizzle)
+
++ (void)swizzleSelectors:(NSArray<NSString*>*)selectorNames;
+
 @end
 
 NS_ASSUME_NONNULL_END
