@@ -17,13 +17,12 @@
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wundeclared-selector"
 
-static BPMailBundle *mySelf;
-
 - (id)init {
     if (self = [super init]) {
         NSLog(@"init");
     }
-    mySelf = self;
+
+    [BPMailBundle injectCodeForMainToolbarItem];
     
     return self;
 }
@@ -44,18 +43,16 @@ static BPMailBundle *mySelf;
     // Register our plugin bundle in Apple Mail
     [[((MVMailBundle *)self) class] registerBundle];
     NSLog(@"regeistered");
-
-    [self swizzleAddCustomInMailToolbarItem]; //BUFF: mv to init
 }
 
 // MARK: - Swizzle Mailtoolbar & Delegate (MessageView)
 
-+ (void) swizzleAddCustomInMailToolbarItem {
-    [self swizzleMailtoolbarToolbarDelegateMethods];
-    [self swizzleMessageViewerToolbarDelegateMethods];
++ (void) injectCodeForMainToolbarItem {
+    [self injectCodeInMailtoolbar];
+    [self injectCodeInMessageViewer];
 }
 
-+ (void)swizzleMessageViewerToolbarDelegateMethods {
++ (void)injectCodeInMessageViewer {
     Class class = NSClassFromString(@"MessageViewer");
     NSArray<NSString*> * selectors = @[@"toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:",
                                        @"toolbarAllowedItemIdentifiers:",
@@ -63,7 +60,7 @@ static BPMailBundle *mySelf;
     [class injectMailBPExtensionsAndswizzleSelectors:selectors];
 }
 
-+ (void)swizzleMailtoolbarToolbarDelegateMethods {
++ (void)injectCodeInMailtoolbar {
     Class class = NSClassFromString(@"MailToolbar");
     NSArray<NSString*> * selectors = @[@"toolbarDefaultItemIdentifiers:",
                                        @"_plistForToolbarWithIdentifier:"];

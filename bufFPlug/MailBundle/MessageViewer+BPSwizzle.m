@@ -34,7 +34,6 @@
 }
 
 - (void)toolbarItemAction:(id *)sender {
-    NSLog(@"Clicked!");
     NSAlert *alert = [[NSAlert alloc] init];
     alert.messageText = @"Feature 1";
     alert.informativeText = @"Done!";
