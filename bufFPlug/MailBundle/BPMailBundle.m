@@ -23,7 +23,6 @@
     }
 
     [BPMailBundle injectCodeForMainToolbarItem];
-    mcHeadersForMcMessge = [NSMutableDictionary new];
     return self;
 }
 

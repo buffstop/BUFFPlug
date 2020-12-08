@@ -10,12 +10,9 @@
 #import "MCMessage.h"
 #import "MCMessageHeaders.h"
 
-static NSMutableDictionary<MCMessage*,MCMessageHeaders*> * _Nonnull mcHeadersForMcMessge; //BUFF: obsolete?
 static NSToolbarItem * _Nonnull ourToolbarItem;
 
 NS_ASSUME_NONNULL_BEGIN
-
-
 
 @interface BPMailBundle : NSObject
 

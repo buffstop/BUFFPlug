@@ -226,7 +226,7 @@
 			dependencies = (
 			);
 			name = bufFPlug;
-			productName = DavidPlugin;
+			productName = bufFPlug;
 			productReference = 4E4E73E2257A9FC90045AD8D /* bufFPlug.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
