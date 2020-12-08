@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 156776DB257E9C58003B3403 /* BPMailBundle.m */; };
+		15900ECB257FF4A4009D209D /* BPCodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15900ECA257FF4A4009D209D /* BPCodeInjector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,8 @@
 		156776D8257E9C1B003B3403 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
 		156776DA257E9C58003B3403 /* BPMailBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMailBundle.h; sourceTree = "<group>"; };
 		156776DB257E9C58003B3403 /* BPMailBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPMailBundle.m; sourceTree = "<group>"; };
+		15900EC9257FF4A4009D209D /* BPCodeInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPCodeInjector.h; sourceTree = "<group>"; };
+		15900ECA257FF4A4009D209D /* BPCodeInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPCodeInjector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +69,28 @@
 		156776D9257E9C24003B3403 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				15900EC7257FF47D009D209D /* CodeInjector */,
 				156776DA257E9C58003B3403 /* BPMailBundle.h */,
 				156776DB257E9C58003B3403 /* BPMailBundle.m */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		15900EC7257FF47D009D209D /* CodeInjector */ = {
+			isa = PBXGroup;
+			children = (
+				15900EC8257FF4A4009D209D /* CodeInjector */,
+			);
+			path = CodeInjector;
+			sourceTree = "<group>";
+		};
+		15900EC8257FF4A4009D209D /* CodeInjector */ = {
+			isa = PBXGroup;
+			children = (
+				15900EC9257FF4A4009D209D /* BPCodeInjector.h */,
+				15900ECA257FF4A4009D209D /* BPCodeInjector.m */,
+			);
+			name = CodeInjector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15900ECB257FF4A4009D209D /* BPCodeInjector.m in Sources */,
 				156776DC257E9C58003B3403 /* BPMailBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
