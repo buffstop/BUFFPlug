@@ -6,7 +6,14 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MCMessageHeaders.h"
+#import "MCMessage.h"
+
+static NSMutableDictionary<MCMessage*,MCMessageHeaders*> * _Nonnull mcHeadersForMcMessge;
+
 NS_ASSUME_NONNULL_BEGIN
+
+
 
 @interface BPMailBundle : NSObject
 
