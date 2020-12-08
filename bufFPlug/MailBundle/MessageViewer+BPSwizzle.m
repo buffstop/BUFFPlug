@@ -35,6 +35,11 @@
 
 - (void)toolbarItemAction:(id *)sender {
     NSLog(@"Clicked!");
+    NSAlert *alert = [[NSAlert alloc] init];
+    alert.messageText = @"Feature 1";
+    alert.informativeText = @"Done!";
+    [alert addButtonWithTitle:@"Check"];
+    [alert runModal];
 }
 
 - (NSArray *)bp_toolbarAllowedItemIdentifiers:(NSToolbar *)arg1 {
