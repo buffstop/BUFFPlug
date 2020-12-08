@@ -16,20 +16,6 @@
 		156776D8257E9C1B003B3403 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
 		156776DA257E9C58003B3403 /* BPMailBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMailBundle.h; sourceTree = "<group>"; };
 		156776DB257E9C58003B3403 /* BPMailBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPMailBundle.m; sourceTree = "<group>"; };
-		15AA7E43257EACEC00B526DF /* MessageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewer.h; sourceTree = "<group>"; };
-		15AA7E45257EAE0300B526DF /* FlaggedStatusToolbarItemDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FlaggedStatusToolbarItemDelegate-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E47257EAF1B00B526DF /* MessageViewerSearchFieldFocusDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MessageViewerSearchFieldFocusDelegate-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E48257EAF1B00B526DF /* MailboxSelectionOwner-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MailboxSelectionOwner-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E49257EAF1B00B526DF /* MSSearchSessionControllerDataSource-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSSearchSessionControllerDataSource-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E4A257EAF1B00B526DF /* MCActivityTarget-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCActivityTarget-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E4B257EAF1B00B526DF /* MessageTransferDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MessageTransferDelegate-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E4C257EAF1B00B526DF /* MailboxesOutlineViewControllerDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MailboxesOutlineViewControllerDelegate-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E4D257EAF1B00B526DF /* SGTSearchFieldQueryScopeDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SGTSearchFieldQueryScopeDelegate-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E4E257EAF1B00B526DF /* TerminationHandler-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TerminationHandler-Protocol.h"; sourceTree = "<group>"; };
-		15AA7E50257EB00E00B526DF /* MailToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailToolbar.h; sourceTree = "<group>"; };
-		15AA7E52257EB05100B526DF /* MessageViewer+BPAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageViewer+BPAdditions.h"; sourceTree = "<group>"; };
-		15AA7E53257EB05200B526DF /* MessageViewer+BPAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MessageViewer+BPAdditions.m"; sourceTree = "<group>"; };
-		15AA7E56257EB0F700B526DF /* NSToolbarDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSToolbarDelegate-Protocol.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +58,6 @@
 		156776D7257E9BED003B3403 /* MailHeaders */ = {
 			isa = PBXGroup;
 			children = (
-				15AA7E59257EB2C200B526DF /* _UNUSED_DELETE */,
 				156776D8257E9C1B003B3403 /* MVMailBundle.h */,
 			);
 			path = MailHeaders;
@@ -81,39 +66,10 @@
 		156776D9257E9C24003B3403 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				15AA7E58257EB2B200B526DF /* UnusedDelete */,
 				156776DA257E9C58003B3403 /* BPMailBundle.h */,
 				156776DB257E9C58003B3403 /* BPMailBundle.m */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		15AA7E58257EB2B200B526DF /* UnusedDelete */ = {
-			isa = PBXGroup;
-			children = (
-				15AA7E52257EB05100B526DF /* MessageViewer+BPAdditions.h */,
-				15AA7E53257EB05200B526DF /* MessageViewer+BPAdditions.m */,
-			);
-			path = UnusedDelete;
-			sourceTree = "<group>";
-		};
-		15AA7E59257EB2C200B526DF /* _UNUSED_DELETE */ = {
-			isa = PBXGroup;
-			children = (
-				15AA7E56257EB0F700B526DF /* NSToolbarDelegate-Protocol.h */,
-				15AA7E50257EB00E00B526DF /* MailToolbar.h */,
-				15AA7E4C257EAF1B00B526DF /* MailboxesOutlineViewControllerDelegate-Protocol.h */,
-				15AA7E48257EAF1B00B526DF /* MailboxSelectionOwner-Protocol.h */,
-				15AA7E4A257EAF1B00B526DF /* MCActivityTarget-Protocol.h */,
-				15AA7E4B257EAF1B00B526DF /* MessageTransferDelegate-Protocol.h */,
-				15AA7E47257EAF1B00B526DF /* MessageViewerSearchFieldFocusDelegate-Protocol.h */,
-				15AA7E49257EAF1B00B526DF /* MSSearchSessionControllerDataSource-Protocol.h */,
-				15AA7E4D257EAF1B00B526DF /* SGTSearchFieldQueryScopeDelegate-Protocol.h */,
-				15AA7E4E257EAF1B00B526DF /* TerminationHandler-Protocol.h */,
-				15AA7E45257EAE0300B526DF /* FlaggedStatusToolbarItemDelegate-Protocol.h */,
-				15AA7E43257EACEC00B526DF /* MessageViewer.h */,
-			);
-			path = _UNUSED_DELETE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
