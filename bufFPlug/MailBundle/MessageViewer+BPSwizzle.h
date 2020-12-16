@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MessageViewer_BP : NSObject
 
-+ (void)updateOurToolbarItemWithHeaders:(MCMessageHeaders*)newHeaders;
++ (void)updatePopoverWithHeaders:(MCMessageHeaders*)newHeaders;
 
 @end
 
