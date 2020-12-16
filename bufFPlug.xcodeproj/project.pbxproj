@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		154EFED9258A77AA006DC70D /* BPHeadersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154EFED8258A77AA006DC70D /* BPHeadersViewController.m */; };
 		154EFEDC258A7809006DC70D /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEDB258A7809006DC70D /* main.storyboard */; };
+		154EFEE1258A7A6F006DC70D /* ConversationMember-BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 154EFEE0258A7A6F006DC70D /* ConversationMember-BPSwizzle.m */; };
 		159014BE258008F2009D209D /* NSObject+ClassInjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 159014BD258008F2009D209D /* NSObject+ClassInjection.m */; };
 		159014C225800A10009D209D /* BPMCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 159014C125800A10009D209D /* BPMCMessage.m */; };
 		15A49330257FB2700033FB9D /* MailToolbar+BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A4932F257FB2700033FB9D /* MailToolbar+BPSwizzle.m */; };
@@ -21,6 +22,8 @@
 		154EFED7258A77AA006DC70D /* BPHeadersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPHeadersViewController.h; sourceTree = "<group>"; };
 		154EFED8258A77AA006DC70D /* BPHeadersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPHeadersViewController.m; sourceTree = "<group>"; };
 		154EFEDB258A7809006DC70D /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		154EFEDF258A7A6F006DC70D /* ConversationMember-BPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConversationMember-BPSwizzle.h"; sourceTree = "<group>"; };
+		154EFEE0258A7A6F006DC70D /* ConversationMember-BPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ConversationMember-BPSwizzle.m"; sourceTree = "<group>"; };
 		159014BC258008F2009D209D /* NSObject+ClassInjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ClassInjection.h"; sourceTree = "<group>"; };
 		159014BD258008F2009D209D /* NSObject+ClassInjection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ClassInjection.m"; sourceTree = "<group>"; };
 		159014C025800A10009D209D /* BPMCMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPMCMessage.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				159014C125800A10009D209D /* BPMCMessage.m */,
 				154EFED7258A77AA006DC70D /* BPHeadersViewController.h */,
 				154EFED8258A77AA006DC70D /* BPHeadersViewController.m */,
+				154EFEDF258A7A6F006DC70D /* ConversationMember-BPSwizzle.h */,
+				154EFEE0258A7A6F006DC70D /* ConversationMember-BPSwizzle.m */,
 			);
 			path = MailBundle;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				15A498F2257FB33D0033FB9D /* MessageViewer+BPSwizzle.m in Sources */,
 				15A498F6257FB4660033FB9D /* BPCodeInjector.m in Sources */,
 				15A49330257FB2700033FB9D /* MailToolbar+BPSwizzle.m in Sources */,
+				154EFEE1258A7A6F006DC70D /* ConversationMember-BPSwizzle.m in Sources */,
 				154EFED9258A77AA006DC70D /* BPHeadersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

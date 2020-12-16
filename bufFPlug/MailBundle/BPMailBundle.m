@@ -49,6 +49,7 @@
 + (void) injectCodeForMainToolbarItem {
     [self injectCodeInMailtoolbar];
     [self injectCodeInMessageViewer];
+    [self injectCodeInConversationMember];
 }
 
 + (void)injectCodeInMessageViewer {
@@ -63,6 +64,12 @@
     Class class = NSClassFromString(@"MailToolbar");
     NSArray<NSString*> * selectors = @[@"toolbarDefaultItemIdentifiers:",
                                        @"_plistForToolbarWithIdentifier:"];
+    [class injectMailBPExtensionsAndswizzleSelectors:selectors];
+}
+
++ (void)injectCodeInConversationMember {
+    Class class = NSClassFromString(@"ConversationMember");
+    NSArray<NSString*> * selectors = @[@"headers"];
     [class injectMailBPExtensionsAndswizzleSelectors:selectors];
 }
 
