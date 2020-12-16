@@ -78,10 +78,8 @@ static NSPopover *popover;
 
     item.view = button;
     item.view.layer.backgroundColor = NSColor.greenColor.CGColor; //BUFF: RM
-
-
     item.target = nil;
-//    item.action = @selector(togglePopoverVisisble:);
+
     return item;
 }
 

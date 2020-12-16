@@ -10,9 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ConversationMember_BP : NSObject
-
-// method declarations
-
 @end
 
 NS_ASSUME_NONNULL_END

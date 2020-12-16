@@ -27,18 +27,18 @@
 }
 
 + (void)initialize {
-    
+
     Class mvMailBundleClass = NSClassFromString(@"MVMailBundle");
     assert(mvMailBundleClass);
-    
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated"
     class_setSuperclass([self class], mvMailBundleClass);
 #pragma GCC diagnostic pop
-    
+
     // Makes sure init() is called. Trigger trickery there.
     [BPMailBundle sharedInstance];
-    
+
     // Register our plugin bundle in Apple Mail
     [[((MVMailBundle *)self) class] registerBundle];
     NSLog(@"regeistered");

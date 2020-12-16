@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-#pragma mark - Singleton
+// MARK: - Singleton
 
 @interface BPMailBundle (NoImplementation)
 // Prevent "incomplete implementation" warning.
