@@ -55,15 +55,13 @@
 + (void)injectCodeInMessageViewer {
     Class class = NSClassFromString(@"MessageViewer");
     NSArray<NSString*> * selectors = @[@"toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:",
-                                       @"toolbarAllowedItemIdentifiers:",
                                        @"toolbarWillAddItem:"];
     [class injectMailBPExtensionsAndswizzleSelectors:selectors];
 }
 
 + (void)injectCodeInMailtoolbar {
     Class class = NSClassFromString(@"MailToolbar");
-    NSArray<NSString*> * selectors = @[@"toolbarDefaultItemIdentifiers:",
-                                       @"_plistForToolbarWithIdentifier:"];
+    NSArray<NSString*> * selectors = @[@"_plistForToolbarWithIdentifier:"];
     [class injectMailBPExtensionsAndswizzleSelectors:selectors];
 }
 

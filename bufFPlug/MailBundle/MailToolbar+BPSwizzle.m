@@ -12,15 +12,6 @@ NSString* const bpToolbarItemIdentifier = @"bpToolbarItemIdentifier";
 
 @implementation MailToolbar_BP
 
-- (NSArray *)bp_toolbarDefaultItemIdentifiers:(NSToolbar *)arg1 {
-    NSMutableArray *defaultIdentifiers = [self bp_toolbarDefaultItemIdentifiers:arg1].mutableCopy;
-    if (![defaultIdentifiers containsObject:bpToolbarItemIdentifier]) {
-        // Only if not in already
-        [defaultIdentifiers addObject:bpToolbarItemIdentifier];
-    }
-    return defaultIdentifiers;
-}
-
 + (id)bp__plistForToolbarWithIdentifier:(id)arg1 {
     id ret = [self bp__plistForToolbarWithIdentifier:arg1];
 
