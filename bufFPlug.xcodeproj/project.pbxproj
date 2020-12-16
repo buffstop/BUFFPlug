@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154EFED9258A77AA006DC70D /* BPHeadersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154EFED8258A77AA006DC70D /* BPHeadersViewController.m */; };
+		154EFEDC258A7809006DC70D /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154EFEDB258A7809006DC70D /* main.storyboard */; };
+		154EFEE1258A7A6F006DC70D /* ConversationMember-BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 154EFEE0258A7A6F006DC70D /* ConversationMember-BPSwizzle.m */; };
+		159014BE258008F2009D209D /* NSObject+ClassInjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 159014BD258008F2009D209D /* NSObject+ClassInjection.m */; };
 		15A49330257FB2700033FB9D /* MailToolbar+BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A4932F257FB2700033FB9D /* MailToolbar+BPSwizzle.m */; };
 		15A498F2257FB33D0033FB9D /* MessageViewer+BPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A498F1257FB33D0033FB9D /* MessageViewer+BPSwizzle.m */; };
 		15A498F6257FB4660033FB9D /* BPCodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A498F5257FB4660033FB9D /* BPCodeInjector.m */; };
@@ -14,7 +18,46 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		159014A9257FFBA0009D209D /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
+		154EFED7258A77AA006DC70D /* BPHeadersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPHeadersViewController.h; sourceTree = "<group>"; };
+		154EFED8258A77AA006DC70D /* BPHeadersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPHeadersViewController.m; sourceTree = "<group>"; };
+		154EFEDB258A7809006DC70D /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		154EFEDF258A7A6F006DC70D /* ConversationMember-BPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConversationMember-BPSwizzle.h"; sourceTree = "<group>"; };
+		154EFEE0258A7A6F006DC70D /* ConversationMember-BPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ConversationMember-BPSwizzle.m"; sourceTree = "<group>"; };
+		159014BC258008F2009D209D /* NSObject+ClassInjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ClassInjection.h"; sourceTree = "<group>"; };
+		159014BD258008F2009D209D /* NSObject+ClassInjection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ClassInjection.m"; sourceTree = "<group>"; };
+		1590215525800E3B009D209D /* EDLibraryMessage-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EDLibraryMessage-Protocol.h"; sourceTree = "<group>"; };
+		1590215625800E3B009D209D /* IMAPMessage-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMAPMessage-Protocol.h"; sourceTree = "<group>"; };
+		1590215725800E3B009D209D /* EDIndexableAccount-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EDIndexableAccount-Protocol.h"; sourceTree = "<group>"; };
+		1590215825800E3B009D209D /* ECMessage-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECMessage-Protocol.h"; sourceTree = "<group>"; };
+		1590215925800E3B009D209D /* IMAPMessageDataSource-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMAPMessageDataSource-Protocol.h"; sourceTree = "<group>"; };
+		1590215A25800E3B009D209D /* IMAPPersistedMessage-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMAPPersistedMessage-Protocol.h"; sourceTree = "<group>"; };
+		1590215B25800E3B009D209D /* EDIndexableMessage-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EDIndexableMessage-Protocol.h"; sourceTree = "<group>"; };
+		1590215C25800E3B009D209D /* MFLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLibrary.h; sourceTree = "<group>"; };
+		1590215D25800E3B009D209D /* MFMessageThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMessageThread.h; sourceTree = "<group>"; };
+		1590215E25800E3B009D209D /* EDSearchableIndexReasonProvider-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EDSearchableIndexReasonProvider-Protocol.h"; sourceTree = "<group>"; };
+		1590215F25800E3B009D209D /* MCChanging-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCChanging-Protocol.h"; sourceTree = "<group>"; };
+		1590216025800E3B009D209D /* MFLibraryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLibraryStore.h; sourceTree = "<group>"; };
+		1590216125800E3B009D209D /* MCActivityTarget-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCActivityTarget-Protocol.h"; sourceTree = "<group>"; };
+		1590216225800E3B009D209D /* EDIndexableMailbox-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EDIndexableMailbox-Protocol.h"; sourceTree = "<group>"; };
+		1590216325800E3B009D209D /* ECMailbox-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECMailbox-Protocol.h"; sourceTree = "<group>"; };
+		1590216425800E3B009D209D /* MFLibraryMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLibraryMessage.h; sourceTree = "<group>"; };
+		1590216625800E3B009D209D /* ECSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSubject.h; sourceTree = "<group>"; };
+		1590216825800E3B009D209D /* MCMessageDataSource-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCMessageDataSource-Protocol.h"; sourceTree = "<group>"; };
+		1590216A25800E3B009D209D /* MCMessageHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMessageHeaders.h; sourceTree = "<group>"; };
+		1590216B25800E3B009D209D /* MCMessageSortingInterface-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCMessageSortingInterface-Protocol.h"; sourceTree = "<group>"; };
+		1590216C25800E3B009D209D /* ECMessageHeaders-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECMessageHeaders-Protocol.h"; sourceTree = "<group>"; };
+		1590216D25800E3B009D209D /* MCAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAttachment.h; sourceTree = "<group>"; };
+		1590216E25800E3B009D209D /* ECMailAccount-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ECMailAccount-Protocol.h"; sourceTree = "<group>"; };
+		1590216F25800E3B009D209D /* MCAttachmentDataSource-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCAttachmentDataSource-Protocol.h"; sourceTree = "<group>"; };
+		1590217025800E3B009D209D /* MCMessageBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMessageBody.h; sourceTree = "<group>"; };
+		1590217125800E3B009D209D /* MCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMessage.h; sourceTree = "<group>"; };
+		1590217225800E3B009D209D /* MCDataAttachmentDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDataAttachmentDataSource.h; sourceTree = "<group>"; };
+		1590217425800EC8009D209D /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
+		159021A7258011FD009D209D /* MCMimePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMimePart.h; sourceTree = "<group>"; };
+		159021A8258011FD009D209D /* MCMutableMessageHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMutableMessageHeaders.h; sourceTree = "<group>"; };
+		159021A9258011FD009D209D /* NSData-MailCoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-MailCoreAdditions.h"; sourceTree = "<group>"; };
+		159021AA258011FD009D209D /* WebResourceLoadDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebResourceLoadDelegate-Protocol.h"; sourceTree = "<group>"; };
+		159021AB258011FD009D209D /* MCRemoteURLAttachmentDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRemoteURLAttachmentDataSource.h; sourceTree = "<group>"; };
 		15A4932E257FB2700033FB9D /* MailToolbar+BPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailToolbar+BPSwizzle.h"; sourceTree = "<group>"; };
 		15A4932F257FB2700033FB9D /* MailToolbar+BPSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MailToolbar+BPSwizzle.m"; sourceTree = "<group>"; };
 		15A498F0257FB33D0033FB9D /* MessageViewer+BPSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageViewer+BPSwizzle.h"; sourceTree = "<group>"; };
@@ -41,17 +84,92 @@
 		15900EEC257FFB2E009D209D /* Mail Headers */ = {
 			isa = PBXGroup;
 			children = (
-				15901096257FFB2E009D209D /* MailUI */,
+				159021A6258011FD009D209D /* MailCore Framework */,
+				1590217425800EC8009D209D /* MVMailBundle.h */,
+				1590216525800E3B009D209D /* EmailCore Framework - 7 */,
+				1590216725800E3B009D209D /* Mail Application - 3608.40.2.2.4 */,
+				1590215425800E3B009D209D /* Mail Framework - 7 */,
+				1590216925800E3B009D209D /* MailCore Framework - 7 */,
 			);
 			path = "Mail Headers";
 			sourceTree = "<group>";
 		};
-		15901096257FFB2E009D209D /* MailUI */ = {
+		1590215425800E3B009D209D /* Mail Framework - 7 */ = {
 			isa = PBXGroup;
 			children = (
-				159014A9257FFBA0009D209D /* MVMailBundle.h */,
+				1590215525800E3B009D209D /* EDLibraryMessage-Protocol.h */,
+				1590215625800E3B009D209D /* IMAPMessage-Protocol.h */,
+				1590215725800E3B009D209D /* EDIndexableAccount-Protocol.h */,
+				1590215825800E3B009D209D /* ECMessage-Protocol.h */,
+				1590215925800E3B009D209D /* IMAPMessageDataSource-Protocol.h */,
+				1590215A25800E3B009D209D /* IMAPPersistedMessage-Protocol.h */,
+				1590215B25800E3B009D209D /* EDIndexableMessage-Protocol.h */,
+				1590215C25800E3B009D209D /* MFLibrary.h */,
+				1590215D25800E3B009D209D /* MFMessageThread.h */,
+				1590215E25800E3B009D209D /* EDSearchableIndexReasonProvider-Protocol.h */,
+				1590215F25800E3B009D209D /* MCChanging-Protocol.h */,
+				1590216025800E3B009D209D /* MFLibraryStore.h */,
+				1590216125800E3B009D209D /* MCActivityTarget-Protocol.h */,
+				1590216225800E3B009D209D /* EDIndexableMailbox-Protocol.h */,
+				1590216325800E3B009D209D /* ECMailbox-Protocol.h */,
+				1590216425800E3B009D209D /* MFLibraryMessage.h */,
 			);
-			path = MailUI;
+			path = "Mail Framework - 7";
+			sourceTree = "<group>";
+		};
+		1590216525800E3B009D209D /* EmailCore Framework - 7 */ = {
+			isa = PBXGroup;
+			children = (
+				1590216625800E3B009D209D /* ECSubject.h */,
+			);
+			path = "EmailCore Framework - 7";
+			sourceTree = "<group>";
+		};
+		1590216725800E3B009D209D /* Mail Application - 3608.40.2.2.4 */ = {
+			isa = PBXGroup;
+			children = (
+				1590216825800E3B009D209D /* MCMessageDataSource-Protocol.h */,
+			);
+			path = "Mail Application - 3608.40.2.2.4";
+			sourceTree = "<group>";
+		};
+		1590216925800E3B009D209D /* MailCore Framework - 7 */ = {
+			isa = PBXGroup;
+			children = (
+				1590216A25800E3B009D209D /* MCMessageHeaders.h */,
+				1590216B25800E3B009D209D /* MCMessageSortingInterface-Protocol.h */,
+				1590216C25800E3B009D209D /* ECMessageHeaders-Protocol.h */,
+				1590216D25800E3B009D209D /* MCAttachment.h */,
+				1590216E25800E3B009D209D /* ECMailAccount-Protocol.h */,
+				1590216F25800E3B009D209D /* MCAttachmentDataSource-Protocol.h */,
+				1590217025800E3B009D209D /* MCMessageBody.h */,
+				1590217125800E3B009D209D /* MCMessage.h */,
+				1590217225800E3B009D209D /* MCDataAttachmentDataSource.h */,
+			);
+			path = "MailCore Framework - 7";
+			sourceTree = "<group>";
+		};
+		1590219A2580112F009D209D /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				159014BC258008F2009D209D /* NSObject+ClassInjection.h */,
+				159014BD258008F2009D209D /* NSObject+ClassInjection.m */,
+				15A498F4257FB4660033FB9D /* BPCodeInjector.h */,
+				15A498F5257FB4660033FB9D /* BPCodeInjector.m */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		159021A6258011FD009D209D /* MailCore Framework */ = {
+			isa = PBXGroup;
+			children = (
+				159021A7258011FD009D209D /* MCMimePart.h */,
+				159021A8258011FD009D209D /* MCMutableMessageHeaders.h */,
+				159021A9258011FD009D209D /* NSData-MailCoreAdditions.h */,
+				159021AA258011FD009D209D /* WebResourceLoadDelegate-Protocol.h */,
+				159021AB258011FD009D209D /* MCRemoteURLAttachmentDataSource.h */,
+			);
+			path = "MailCore Framework";
 			sourceTree = "<group>";
 		};
 		4E4E73D9257A9FC90045AD8D = {
@@ -73,6 +191,7 @@
 		4E4E73E4257A9FC90045AD8D /* bufFPlug */ = {
 			isa = PBXGroup;
 			children = (
+				1590219A2580112F009D209D /* Injection */,
 				15900EEC257FFB2E009D209D /* Mail Headers */,
 				4E4E73E5257A9FC90045AD8D /* Info.plist */,
 				4E4E73F0257AA06B0045AD8D /* MailBundle */,
@@ -83,14 +202,17 @@
 		4E4E73F0257AA06B0045AD8D /* MailBundle */ = {
 			isa = PBXGroup;
 			children = (
+				154EFEDB258A7809006DC70D /* main.storyboard */,
 				4E4E73F2257AA06B0045AD8D /* BPMailBundle.h */,
 				4E4E73F1257AA06B0045AD8D /* BPMailBundle.m */,
 				15A4932E257FB2700033FB9D /* MailToolbar+BPSwizzle.h */,
 				15A4932F257FB2700033FB9D /* MailToolbar+BPSwizzle.m */,
 				15A498F0257FB33D0033FB9D /* MessageViewer+BPSwizzle.h */,
 				15A498F1257FB33D0033FB9D /* MessageViewer+BPSwizzle.m */,
-				15A498F4257FB4660033FB9D /* BPCodeInjector.h */,
-				15A498F5257FB4660033FB9D /* BPCodeInjector.m */,
+				154EFED7258A77AA006DC70D /* BPHeadersViewController.h */,
+				154EFED8258A77AA006DC70D /* BPHeadersViewController.m */,
+				154EFEDF258A7A6F006DC70D /* ConversationMember-BPSwizzle.h */,
+				154EFEE0258A7A6F006DC70D /* ConversationMember-BPSwizzle.m */,
 			);
 			path = MailBundle;
 			sourceTree = "<group>";
@@ -112,7 +234,7 @@
 			dependencies = (
 			);
 			name = bufFPlug;
-			productName = DavidPlugin;
+			productName = bufFPlug;
 			productReference = 4E4E73E2257A9FC90045AD8D /* bufFPlug.mailbundle */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -152,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154EFEDC258A7809006DC70D /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,9 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E4E73F3257AA06B0045AD8D /* BPMailBundle.m in Sources */,
+				159014BE258008F2009D209D /* NSObject+ClassInjection.m in Sources */,
 				15A498F2257FB33D0033FB9D /* MessageViewer+BPSwizzle.m in Sources */,
 				15A498F6257FB4660033FB9D /* BPCodeInjector.m in Sources */,
 				15A49330257FB2700033FB9D /* MailToolbar+BPSwizzle.m in Sources */,
+				154EFEE1258A7A6F006DC70D /* ConversationMember-BPSwizzle.m in Sources */,
+				154EFED9258A77AA006DC70D /* BPHeadersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

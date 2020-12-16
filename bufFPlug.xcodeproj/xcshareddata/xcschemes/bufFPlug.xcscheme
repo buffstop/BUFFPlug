@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E4E73E1257A9FC90045AD8D"
+               BlueprintIdentifier = "155C3FE0257E96970070C9AE"
                BuildableName = "bufFPlug.mailbundle"
                BlueprintName = "bufFPlug"
                ReferencedContainer = "container:bufFPlug.xcodeproj">
@@ -42,7 +42,6 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         BundleIdentifier = "com.apple.mail"
          FilePath = "/System/Applications/Mail.app">
       </PathRunnable>
    </LaunchAction>
@@ -55,7 +54,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E4E73E1257A9FC90045AD8D"
+            BlueprintIdentifier = "155C3FE0257E96970070C9AE"
             BuildableName = "bufFPlug.mailbundle"
             BlueprintName = "bufFPlug"
             ReferencedContainer = "container:bufFPlug.xcodeproj">

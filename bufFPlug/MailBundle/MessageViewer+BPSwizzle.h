@@ -7,11 +7,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MCMessageHeaders.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MessageViewer_BP : NSObject
 
-// method declarations
++ (void)updatePopoverWithHeaders:(MCMessageHeaders*)newHeaders;
 
 @end
 
