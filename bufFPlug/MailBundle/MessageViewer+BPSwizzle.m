@@ -8,10 +8,50 @@
 
 #import <AppKit/AppKit.h>
 #import "MailToolbar+BPSwizzle.h"
-#import "BPMailBundle.h"
-
+#import "BPHeadersViewController.h"
+#import "MCMessageHeaders.h"
 
 @implementation MessageViewer_BP
+
+static NSPopover *popover;
+
++ (void)updatePopoverWithHeaders:(MCMessageHeaders*)newHeaders {
+    if (!popover) {
+        popover = [NSPopover new];
+        popover.contentViewController = [BPHeadersViewController newIntance];
+    }
+    [self currentlyPresentedViewController].representedObject = newHeaders;
+}
+
++ (BPHeadersViewController*)currentlyPresentedViewController {
+    return popover.contentViewController;
+}
+
+- (void)togglePopoverVisisble:(NSButton *)sender  {
+    if (!popover) {
+        popover = [NSPopover new];
+        popover.contentViewController = [BPHeadersViewController newIntance];
+    }
+
+    // Should have an EventMonitor for closing
+    if (popover.isShown) {
+        [self closePopover: sender];
+    } else {
+        [self showPopover: sender];
+    }
+}
+
+- (void)showPopover:(NSButton *)sender  {
+    [popover showRelativeToRect:sender.bounds ofView:sender preferredEdge:NSRectEdgeMaxY];
+}
+
+- (void)closePopover:(NSButton *)sender  {
+    [popover performClose:sender];
+}
+
+
+
+// MARK: - Swizzled
 
 - (NSToolbarItem *)bp_toolbar:(NSToolbar *)arg1 itemForItemIdentifier:(NSString *)arg2 willBeInsertedIntoToolbar:(BOOL)arg3 {
     if (![arg2 isEqualToString:bpToolbarItemIdentifier]) {
@@ -26,28 +66,23 @@
     NSSize toolbarItemSize = NSMakeSize(75.0, 23.0);
     NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:bpToolbarItemIdentifier];
     //    [item setView:securityMethodAccessoryView];
-    item.title = @"Feature 1";
+    item.title = @"Feature 2";
+    item.toolTip = @"Feature 2";
     item.minSize = toolbarItemSize;
 
-    item.target = self;
-    item.action = @selector(toolbarItemAction:);
-    ourToolbarItem = item;
+    NSButton *button = [[NSButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    button.title = @"Feature 2";
+    button.toolTip = @"Feature 2";
+    button.target = self;
+    button.action = @selector(togglePopoverVisisble:);
+
+    item.view = button;
+    item.view.layer.backgroundColor = NSColor.greenColor.CGColor; //BUFF: RM
+
+
+    item.target = nil;
+//    item.action = @selector(togglePopoverVisisble:);
     return item;
-}
-
-- (void)toolbarItemAction:(id *)sender {
-    NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = @"Feature 1";
-    alert.informativeText = @"Done!";
-    [alert addButtonWithTitle:@"Check"];
-    [alert runModal];
-}
-
-+ (void)updateOurToolbarItemWithHeaders:(MCMessageHeaders*)newHeaders {
-    NSView *testView = [[NSView alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0, 0, 70.0, 70.0))];
-    ourToolbarItem.view = testView;
-    NSLog(@"BUFF: newHeaders :%@", newHeaders);
-    // got updated
 }
 
 - (NSArray *)bp_toolbarAllowedItemIdentifiers:(NSToolbar *)arg1 {
