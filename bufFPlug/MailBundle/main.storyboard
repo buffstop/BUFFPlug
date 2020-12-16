@@ -43,9 +43,8 @@
                                                             <rect key="frame" x="8" y="0.0" width="114" height="52"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField identifier="keyCell" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTr-bX-Vyh">
+                                                                <textField identifier="keyCell" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTr-bX-Vyh">
                                                                     <rect key="frame" x="0.0" y="18" width="114" height="16"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="uYg-0o-pCP">
                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -53,6 +52,9 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="JTr-bX-Vyh" firstAttribute="centerY" secondItem="4bJ-LC-JHg" secondAttribute="centerY" id="bk6-Ey-k0H"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="JTr-bX-Vyh" id="O9V-zx-szD"/>
                                                             </connections>
